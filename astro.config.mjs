@@ -1,7 +1,7 @@
-import { defineConfig } from 'astro/config';
-import sitemap from '@astrojs/sitemap';
+import { defineConfig } from "astro/config";
+import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  site: 'https://your-site.pages.dev',
+  site: "https://astro-cloudflare-2.pages.dev/",
   integrations: [sitemap()],
 });
