@@ -1,17 +1,41 @@
 ---
-
+const title = "Hello World - Astro on Cloudflare";
+const description = "Astro v5 Hello World deployed on Cloudflare Pages";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <title>{title}</title>
+    <meta name="description" content={description} />
+	<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- SEO -->
+<title>{title}</title>
+<meta name="description" content={description} />
+
+<!-- Open Graph -->
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content="website" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+
+
+<script type="application/ld+json">
+{JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Astro Hello World",
+  "url": "https://your-site.pages.dev",
+  "description": description
+})}
+</script>
+
+  </head>
+  <body>
+    <h1>Hello World 🚀</h1>
+    <p>Astro v5 + Cloudflare Pages</p>
+  </body>
 </html>
